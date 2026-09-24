@@ -1,4 +1,3 @@
-// Початковий масив бібліотеки
 let library = [
     {
         title: "1984",
@@ -37,13 +36,11 @@ let library = [
     }
 ];
 
-// Функція додавання книги
 function addBook(library, newBook) {
     library.push(newBook);
     console.log(`Книга "${newBook.title}" додана до бібліотеки.`);
 }
 
-// Функція видалення книги за назвою
 function removeBook(library, title) {
     const index = library.findIndex(book => book.title === title);
 
@@ -55,7 +52,6 @@ function removeBook(library, title) {
     }
 }
 
-// Функція пошуку книг за автором
 function findBooksByAuthor(library, author) {
     const books = library.filter(book => book.author === author);
 
@@ -75,13 +71,11 @@ function findBooksByAuthor(library, author) {
     });
 }
 
-// Функція підрахунку кількості книг
 function getTotalBooks(library) {
     console.log(`Загальна кількість книг: ${library.length}`);
     return library.length;
 }
 
-// Функція зміни статусу книги
 function toggleAvailability(library, title) {
     const book = library.find(book => book.title === title);
 
@@ -98,7 +92,6 @@ function toggleAvailability(library, title) {
     }
 }
 
-// Виведення всіх книг
 function showAllBooks(library) {
     console.log("Список книг у бібліотеці:");
 
@@ -111,8 +104,6 @@ function showAllBooks(library) {
     });
 }
 
-
-// Демонстрація роботи програми
 
 console.log("ПОЧАТКОВИЙ СПИСОК");
 showAllBooks(library);
